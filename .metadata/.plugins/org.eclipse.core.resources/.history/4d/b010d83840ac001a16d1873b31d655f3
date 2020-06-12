@@ -1,0 +1,5 @@
+package ShoesStore.Dto;
+
+public class CartDto {
+
+}

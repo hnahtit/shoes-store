@@ -1,0 +1,5 @@
+package ShoesStore.Dao;
+
+public class CartDao {
+
+}

@@ -1,0 +1,16 @@
+package ShoesStore.Entities;
+
+public class SanPham {
+
+	private int idsanpham;
+	private String tensanpham;
+	private int idnhasanxu;
+	private int gia;
+	private int rating;
+	private String link1;
+	private String link2;
+	private String link3;
+	private int idloaigiay;
+
+
+}

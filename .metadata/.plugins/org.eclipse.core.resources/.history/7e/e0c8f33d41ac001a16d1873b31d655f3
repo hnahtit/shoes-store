@@ -1,0 +1,7 @@
+package ShoesStore.Dao;
+
+import ShoesStore.Dto.CartDto;
+
+public class CartDao {
+	public CartDto AddCart();
+}

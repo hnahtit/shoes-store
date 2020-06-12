@@ -1,0 +1,5 @@
+package ShoesStore.Service.User;
+
+public interface ILoaiSanPhamService {
+
+}

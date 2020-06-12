@@ -1,0 +1,21 @@
+package ShoesStore.Service.User;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import ShoesStore.Dao.ProductDao;
+import ShoesStore.Entities.Product;
+
+public class ProductImpl implements IProduct {
+
+	@Autowired
+	ProductDao productDao;
+	
+	@Override
+	public List<Product> getProduct() {
+		
+		return productDao.getProduct();
+	}
+
+}

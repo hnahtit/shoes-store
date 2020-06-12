@@ -1,0 +1,10 @@
+package ShoesStore.Dao;
+
+import ShoesStore.Dto.CartDto;
+
+public class CartDao {
+	public CartDto AddCart() {
+		CartDto itemCart = new CartDto();
+		return itemCart;
+	};
+}

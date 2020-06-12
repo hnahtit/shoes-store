@@ -1,0 +1,27 @@
+package ShoesStore.Entities;
+
+public class LoaiSanPham {
+	private int idloaisanpham;
+	private String tenloaisanpham;
+
+	public LoaiSanPham() {
+		super();
+	}
+
+	public int getIdsanpham() {
+		return idsanpham;
+	}
+
+	public void setIdsanpham(int idsanpham) {
+		this.idsanpham = idsanpham;
+	}
+
+	public String getTenloaisanpham() {
+		return tenloaisanpham;
+	}
+
+	public void setTenloaisanpham(String tenloaisanpham) {
+		this.tenloaisanpham = tenloaisanpham;
+	}
+
+}

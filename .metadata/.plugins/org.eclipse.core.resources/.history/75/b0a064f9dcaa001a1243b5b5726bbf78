@@ -1,0 +1,8 @@
+package ShoesStore.Entities;
+
+public class Product {
+private String productId;
+private String productName;
+private String price;
+
+}

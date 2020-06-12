@@ -1,0 +1,9 @@
+package ShoesStore.Service.User;
+
+import java.util.List;
+
+import ShoesStore.Entities.Product;
+
+public interface IProductService {
+	public List<Product> getProduct() ;
+}

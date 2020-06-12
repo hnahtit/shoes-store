@@ -1,0 +1,11 @@
+package ShoesStore.Service.User;
+
+import org.springframework.stereotype.Service;
+
+import ShoesStore.Dto.PaginateDto;
+
+@Service
+public interface IPaginateService {
+public PaginateDto getInfoPaginate(Integer totalPage, Integer limit, Integer currentPage );
+
+}

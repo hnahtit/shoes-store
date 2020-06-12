@@ -1,0 +1,58 @@
+package ShoesStore.UserController;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+import ShoesStore.Dao.HomeDao;
+
+@Controller
+
+public class HomeController {
+	@Autowired
+	HomeDao homeDao;
+	
+	@RequestMapping(value = {"/","/trang-chu"})
+	public ModelAndView Index() {
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("user/index");
+		mav.addObject("productModel",homeDao.getProduct());
+		return mav;
+	}
+	
+	@RequestMapping(value = "/shop")
+	public ModelAndView Shop() {
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("user/shop");
+		return mav;
+	}
+	
+	@RequestMapping(value = "/checkout")
+	public ModelAndView Checkout() {
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("user/checkout");
+		return mav;
+	}
+	
+	@RequestMapping(value = "/login")
+	public ModelAndView Login() {
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("user/login");
+		return mav;
+	}
+	
+	@RequestMapping(value = "/register")
+	public ModelAndView Register() {
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("user/register");
+		return mav;
+	}
+	
+	@RequestMapping(value = "/single")
+	public ModelAndView Single() {
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("user/single");
+		return mav;
+	}
+}

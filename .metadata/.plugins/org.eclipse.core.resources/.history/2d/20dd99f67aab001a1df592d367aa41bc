@@ -1,0 +1,27 @@
+package ShoesStore.Service.User;
+
+import org.springframework.stereotype.Service;
+
+import ShoesStore.Dto.PaginateDto;
+
+@Service
+public class PaginateServiceImpl implements IPaginateService {
+
+	@Override
+	public PaginateDto getInfoPaginate(int totalData, int limit, int currentPage ) {
+		PaginateDto paginate = new PaginateDto();
+		paginate.setCurrentPage(currentPage);
+		paginate.setLimit(limit);
+		Integer total = setInfoTotalPage(totalData, limit);
+//		paginate.setTotalPage();
+		return paginate;
+	}
+
+	private int setInfoTotalPage(Integer totalData, Integer limit) {
+		int totalPage =0;
+		totalPage= totalData/limit;
+		return totalPage;
+	}
+
+
+}

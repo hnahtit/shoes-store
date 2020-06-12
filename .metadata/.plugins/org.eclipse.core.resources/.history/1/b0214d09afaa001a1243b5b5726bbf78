@@ -1,0 +1,22 @@
+package ShoesStore.UserController;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+@Controller
+public class HomeController {
+	@RequestMapping(value = {"/","/trang-chu"})
+	public ModelAndView Index() {
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("user/index");
+		return mav;
+	}
+	
+	@RequestMapping(value = "shop")
+	public ModelAndView Shop() {
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("user/product");
+		return mav;
+	}
+}

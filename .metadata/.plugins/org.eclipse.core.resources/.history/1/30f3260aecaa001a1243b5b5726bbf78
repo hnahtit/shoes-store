@@ -1,0 +1,6 @@
+package ShoesStore.Entities;
+
+public class LoaiSanPham {
+private int idsanpham;
+private String tenloaisanpham;
+}

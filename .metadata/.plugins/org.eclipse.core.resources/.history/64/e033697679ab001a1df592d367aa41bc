@@ -1,0 +1,10 @@
+package ShoesStore.Dto;
+
+public class PaginateDto {
+	private int currentPage, limit, start, end, totalPage;
+
+	public PaginateDto(int currentPage,int limit,int start,int end,int totalPage) {
+		super();
+	}
+	
+}

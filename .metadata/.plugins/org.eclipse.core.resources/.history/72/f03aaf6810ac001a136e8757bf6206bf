@@ -1,0 +1,47 @@
+package ShoesStore.UserController;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+import ShoesStore.Dto.PaginateDto;
+import ShoesStore.Service.User.PaginateServiceImpl;
+
+@Controller
+public class ShopController extends BaseController {
+
+	@Autowired
+	PaginateServiceImpl paginateService;
+
+	private int totalProductPerPage = 2;
+	@RequestMapping(value = "/shop/{id}")
+	public ModelAndView Shop(@PathVariable int id) {
+		_mavShare.setViewName("user/shop");
+
+		int totalData = _sanPhamService.getProductByIdLoai(id).size();
+		PaginateDto pagingDtoInfo = paginateService.getInfoPaginate(totalData, totalProductPerPage, 1);
+		
+		_mavShare.addObject("idloaisanpham",id);
+		_mavShare.addObject("phantrangModel",pagingDtoInfo);
+		_mavShare.addObject("sanphamtheoloaiModel",
+				_sanPhamService.getProductByIdLoaiPaging(id, pagingDtoInfo.getStart(), pagingDtoInfo.getEnd()));
+		return _mavShare;
+	}
+	
+	@RequestMapping(value = "/shop/{id}/{currentpage}")
+	public ModelAndView Shop(@PathVariable int id,@PathVariable int currentpage) {
+
+		_mavShare.setViewName("user/shop");
+
+		int totalData = _sanPhamService.getProductByIdLoai(id).size();
+		PaginateDto pagingDtoInfo = paginateService.getInfoPaginate(totalData, totalProductPerPage, currentpage);
+		
+		_mavShare.addObject("idloaisanpham",id);
+		_mavShare.addObject("phantrangModel",pagingDtoInfo);
+		_mavShare.addObject("sanphamtheoloaiModel",
+				_sanPhamService.getProductByIdLoaiPaging(id, pagingDtoInfo.getStart(), pagingDtoInfo.getEnd()));
+		return _mavShare;
+	}
+}

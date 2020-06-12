@@ -1,0 +1,19 @@
+package ShoesStore.Dao;
+
+import java.util.HashMap;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import ShoesStore.Dto.CartDto;
+
+public class CartDao extends BaseDao {
+	
+	@Autowired
+	SanPhamDao sanphamDao;
+	
+	public CartDto AddCart(int id, HashMap<Integer, CartDto> cart) {
+		CartDto itemCart = new CartDto();
+		return itemCart;
+	}
+
+}

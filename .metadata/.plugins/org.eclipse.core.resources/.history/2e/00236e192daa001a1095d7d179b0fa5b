@@ -1,0 +1,5 @@
+package com.shoesstore.controller;
+
+public class HomeController {
+
+}

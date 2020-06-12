@@ -1,0 +1,17 @@
+package ShoesStore.UserController;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+@Controller
+public class ShopController extends BaseController{
+	@RequestMapping(value = "/shop/{id}")
+	public ModelAndView Shop(@PathVariable String id) {
+		ModelAndView mav = new ModelAndView();
+//		mav.addObject(attributeValue);
+		mav.setViewName("user/shop");
+		return mav;
+	}
+}

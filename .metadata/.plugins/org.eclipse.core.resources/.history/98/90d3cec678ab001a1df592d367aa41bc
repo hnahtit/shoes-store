@@ -1,0 +1,6 @@
+package ShoesStore.Dto;
+
+public class PaginateDto {
+	private int currentPage;
+
+}

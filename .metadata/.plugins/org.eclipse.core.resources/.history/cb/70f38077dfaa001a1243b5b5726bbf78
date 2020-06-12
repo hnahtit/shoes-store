@@ -1,0 +1,29 @@
+package ShoesStore.Dao;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
+
+import ShoesStore.Entities.MapperProduct;
+import ShoesStore.Entities.Product;
+
+@Repository
+public class HomeDao {
+	@Autowired
+	JdbcTemplate _jdbcTemplate;
+
+	public List<Product> getProduct() {
+		List<Product> list = new ArrayList<Product>();
+		String sql = "select Product_ID,Product_Name,Price from product;";
+		list = _jdbcTemplate.query(sql, new MapperProduct());
+		return list;
+	}
+	public static void main(String[] args) {
+		HomeDao homeDao = new HomeDao();
+		List<Product> list = homeDao.getProduct();
+		
+	}
+}

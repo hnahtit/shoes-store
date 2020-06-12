@@ -1,0 +1,17 @@
+package ShoesStore.Service.User;
+
+import org.springframework.stereotype.Service;
+
+import ShoesStore.Dto.PaginateDto;
+
+@Service
+public class PaginateServiceImpl implements IPaginateService {
+
+	@Override
+	public PaginateDto getInfoPaginate() {
+		PaginateDto paginate = new PaginateDto();
+		
+		return paginate;
+	}
+
+}

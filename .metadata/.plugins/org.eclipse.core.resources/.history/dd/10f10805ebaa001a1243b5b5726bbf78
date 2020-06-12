@@ -1,0 +1,19 @@
+package ShoesStore.Entities;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import org.springframework.jdbc.core.RowMapper;
+
+public class MapperProduct implements RowMapper<SanPham> {
+
+	@Override
+	public SanPham mapRow(ResultSet rs, int rowNum) throws SQLException {
+		SanPham product = new SanPham();
+		product.setProductId(rs.getString("Product_ID"));
+		product.setPrice(rs.getInt("Price"));
+		product.setProductName(rs.getString("Product_Name"));
+		return product;
+	}
+
+}

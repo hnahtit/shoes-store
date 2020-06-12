@@ -1,0 +1,13 @@
+package ShoesStore.Dao;
+
+import java.util.HashMap;
+
+import ShoesStore.Dto.CartDto;
+
+public class CartDao extends BaseDao{
+	public CartDto AddCart(int id, HashMap<int, CartDto> cart) {
+		CartDto itemCart = new CartDto();
+		return itemCart;
+	};
+	
+}

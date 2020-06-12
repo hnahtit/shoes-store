@@ -1,0 +1,9 @@
+package ShoesStore.Dto;
+
+import ShoesStore.Entities.SanPham;
+
+public class CartDto {
+private int quanty; 
+private double totalPrice;
+private SanPham sanpham;
+}

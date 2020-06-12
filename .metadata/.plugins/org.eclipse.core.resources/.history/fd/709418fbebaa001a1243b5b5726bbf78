@@ -1,0 +1,5 @@
+package ShoesStore.Entities;
+
+public class LoaiSanPham {
+
+}
